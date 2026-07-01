@@ -234,7 +234,7 @@ button:active {
     }
 
     .wrapper {
-        padding: 20px 12px;
+        padding: 140px 12px 40px 12px; /* 140px сверху — опустит плеер и откроет фото */
     }
 
     .club-title {

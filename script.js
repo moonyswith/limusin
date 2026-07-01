@@ -85,14 +85,47 @@ function initPlaylist() {
     });
 }
 
+const preloadAudio = document.getElementById('preload-player');
+
 function loadTrack(index, autoPlay = false) {
     if (tracks.length === 0) return;
-
+    
     const listItems = playlistElement.getElementsByTagName('li');
-
+    
     for (let item of listItems) {
         item.classList.remove('active');
     }
+    
+    currentIndex = index;
+    
+    const activeItem = Array.from(listItems).find(item => parseInt(item.getAttribute('data-index')) === currentIndex);
+    
+    if (activeItem) {
+        activeItem.classList.add('active');
+        activeItem.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+    }
+
+    
+    audio.src = 'songs/' + tracks[currentIndex];
+    currentTitle.innerText = tracks[currentIndex].replace('.mp3', '');
+
+    if (autoPlay) {
+        audio.play().catch(e => console.log("Нажмите Play для старта"));
+    }
+
+    
+    preloadNextTrack();
+}
+
+
+function preloadNextTrack() {
+    let nextIndex = currentIndex + 1;
+    if (nextIndex >= tracks.length) nextIndex = 0; 
+    
+    preloadAudio.src = 'songs/' + tracks[nextIndex];
+    preloadAudio.load(); 
+}
+
 
     currentIndex = index;
 

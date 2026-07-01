@@ -116,10 +116,10 @@ body {
 audio {
     width: 100%;
     margin-bottom: 20px;
-    /* Включаем современную темную тему для встроенных элементов управления */
     color-scheme: dark;
     opacity: 0.9;
 }
+
 
 .controls {
     display: flex;
@@ -157,7 +157,6 @@ button:active {
     padding-left: 4px;
 }
 
-/* СТИЛИ СТРОКИ ПОИСКА iOS */
 #search-input {
     width: 100%;
     box-sizing: border-box;
@@ -233,7 +232,7 @@ button:active {
     }
 
     .wrapper {
-        padding: 20px 12px;
+        padding: 260px 12px 40px 12px !important;
     }
 
     .club-title {

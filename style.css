@@ -116,9 +116,11 @@ body {
 audio {
     width: 100%;
     margin-bottom: 20px;
-    filter: invert(1) hue-rotate(180deg) brightness(1.2);
+    /* Включаем современную темную тему для встроенных элементов управления */
+    color-scheme: dark; 
     opacity: 0.9;
 }
+
 
 .controls {
     display: flex;

@@ -1,4 +1,3 @@
-// СПИСОК ВАШИХ ПЕСЕН (Укажите точные названия файлов из папки songs)
 const tracks = [
     "Caramelldancing (Christmas Version).mp3",
     "Jenny .mp3",
@@ -6,7 +5,7 @@ const tracks = [
     "Джиган - На расслабоне.mp3",
     "MACAN - Спой.mp3",
     "Basta - Sansara.mp3"
-    // Добавьте сюда остальные треки через запятую
+
 ];
 
 const audio = document.getElementById('audio-player');
@@ -19,32 +18,29 @@ document.getElementById('count').innerText = tracks.length;
 
 let currentIndex = 0;
 
-// Инициализация списка
+
 function initPlaylist() {
     playlistElement.innerHTML = '';
     tracks.forEach((track, index) => {
         const li = document.createElement('li');
         li.innerText = track.replace('.mp3', '');
-        li.setAttribute('data-index', index); // Сохраняем исходный индекс
+        li.setAttribute('data-index', index); 
         li.addEventListener('click', () => loadTrack(index, true));
         playlistElement.appendChild(li);
     });
 }
 
-// Загрузка трека
 function loadTrack(index, autoPlay = false) {
     if (tracks.length === 0) return;
 
     const listItems = playlistElement.getElementsByTagName('li');
 
-    // Снимаем класс active со всех элементов плейлиста
     for (let item of listItems) {
         item.classList.remove('active');
     }
 
     currentIndex = index;
 
-    // Ищем элемент, у которого сохраненный data-index равен текущему
     const activeItem = Array.from(listItems).find(item => parseInt(item.getAttribute('data-index')) === currentIndex);
 
     if (activeItem) {
@@ -60,7 +56,6 @@ function loadTrack(index, autoPlay = false) {
     }
 }
 
-// Следующий трек
 function nextTrack() {
     let nextIndex = currentIndex + 1;
     if (nextIndex >= tracks.length) nextIndex = 0;

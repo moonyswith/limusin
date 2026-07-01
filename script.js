@@ -6,7 +6,7 @@ const tracks = [
     "темный принц - вклубе.mp3",
     "Наступит ночь.mp3",
     "CUPSIZE семнадцать ножевых.mp3",
-    "Jenny.mp3",
+    "Jenny .mp3",
     "Caramelldancing.mp3",
     "супермаркет.mp3",
     "карта в блоке.mp3",

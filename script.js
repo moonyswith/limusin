@@ -6,6 +6,7 @@ const tracks = [
     "темный принц - вклубе.mp3",
     "Наступит ночь.mp3",
     "CUPSIZE семнадцать ножевых.mp3",
+    "Jenny.mp3",
     "Caramelldancing.mp3",
     "супермаркет.mp3",
     "карта в блоке.mp3",
@@ -62,6 +63,7 @@ const tracks = [
 
 ];
 
+
 const audio = document.getElementById('audio-player');
 const playlistElement = document.getElementById('playlist');
 const currentTitle = document.getElementById('current-title');
@@ -69,6 +71,7 @@ const prevBtn = document.getElementById('prev-btn');
 const nextBtn = document.getElementById('next-btn');
 const searchInput = document.getElementById('search-input');
 document.getElementById('count').innerText = tracks.length;
+
 
 let currentIndex = 0;
 
@@ -89,43 +92,10 @@ function loadTrack(index, autoPlay = false) {
 
     const listItems = playlistElement.getElementsByTagName('li');
 
+    // Снимаем класс active со всех элементов плейлиста
     for (let item of listItems) {
         item.classList.remove('active');
     }
-<<<<<<< HEAD
-
-    currentIndex = index;
-
-    const activeItem = Array.from(listItems).find(item => parseInt(item.getAttribute('data-index')) === currentIndex);
-
-    if (activeItem) {
-        activeItem.classList.add('active');
-        activeItem.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
-    }
-
-
-    audio.src = 'songs/' + tracks[currentIndex];
-    currentTitle.innerText = tracks[currentIndex].replace('.mp3', '');
-
-    if (autoPlay) {
-        audio.play().catch(e => console.log("Нажмите Play для старта"));
-    }
-
-
-    preloadNextTrack();
-}
-
-
-function preloadNextTrack() {
-    let nextIndex = currentIndex + 1;
-    if (nextIndex >= tracks.length) nextIndex = 0;
-
-    preloadAudio.src = 'songs/' + tracks[nextIndex];
-    preloadAudio.load();
-}
-
-=======
->>>>>>> parent of f38c2d8 (Update script.js)
 
     currentIndex = index;
 

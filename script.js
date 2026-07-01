@@ -5,8 +5,7 @@ const tracks = [
     "The Weeknd - Blinding Lights.mp3",
     "Джиган - На расслабоне.mp3",
     "MACAN - Спой.mp3",
-    "Basta - Sansara.mp3"
-    // Добавьте сюда остальные треки через запятую
+    "MACAN - Спой.mp3",   // Добавьте сюда остальные треки через запятую
 ];
 
 const audio = document.getElementById('audio-player');

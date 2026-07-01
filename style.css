@@ -234,7 +234,7 @@ button:active {
     }
 
     .wrapper {
-        padding: 180px 12px 40px 12px !important; /* Ещё ниже опустит плеер */
+        padding: 220px 12px 40px 12px !important; /* Ещё ниже опустит плеер */
     }
 
     .club-title {

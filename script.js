@@ -6,7 +6,6 @@ const tracks = [
     "темный принц - вклубе.mp3",
     "Наступит ночь.mp3",
     "CUPSIZE семнадцать ножевых.mp3",
-    "Jenny.mp3",
     "Caramelldancing.mp3",
     "супермаркет.mp3",
     "карта в блоке.mp3",
@@ -85,8 +84,6 @@ function initPlaylist() {
     });
 }
 
-const preloadAudio = document.getElementById('preload-player');
-
 function loadTrack(index, autoPlay = false) {
     if (tracks.length === 0) return;
 
@@ -95,6 +92,7 @@ function loadTrack(index, autoPlay = false) {
     for (let item of listItems) {
         item.classList.remove('active');
     }
+<<<<<<< HEAD
 
     currentIndex = index;
 
@@ -126,6 +124,8 @@ function preloadNextTrack() {
     preloadAudio.load();
 }
 
+=======
+>>>>>>> parent of f38c2d8 (Update script.js)
 
     currentIndex = index;
 

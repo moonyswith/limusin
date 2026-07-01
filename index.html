@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>LIMOUSINE Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Фото заднего фона -->
+<img src="bg.jpg" alt="Background" class="bg-image">
+
+<!-- Маска плавного перехода в темноту -->
+<div class="bg-overlay"></div>
+
+<!-- Главный контейнер -->
+<div class="wrapper">
+    <!-- Клубный заголовок над плеером -->
+    <h1 class="club-title">LIMOUSINE <span class="club-date">15.07.26</span></h1>
+
+    <!-- Виджет плеера -->
+    <div class="player-container">
+        <div class="now-playing">
+            <div class="track-status">Сейчас играет</div>
+            <div class="track-title" id="current-title">Загрузка...</div>
+        </div>
+
+        <audio id="audio-player" controls></audio>
+
+        <div class="controls">
+            <button id="prev-btn">⏮ Назад</button>
+            <button id="next-btn">Вперед ⏭</button>
+        </div>
+
+        <div class="playlist-header">Очередь треков · <span id="count">0</span></div>
+
+        <!-- СТРОКА ПОИСКА -->
+        <input type="text" id="search-input" placeholder="🔍 Поиск трека..." autocomplete="off">
+
+        <ul class="playlist" id="playlist"></ul>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
